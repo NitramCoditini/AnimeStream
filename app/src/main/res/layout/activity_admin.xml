@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060606"
+    tools:context=".AdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:id="@+id/line23"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.50">
+
+        <ImageButton
+            android:id="@+id/image_upload"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="0dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22"
+            android:text="Select above image button to place image"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/InputText10"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line23"
+        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:background="@color/white"
+            android:hint="Series name"
+            android:textColorHint="#5A5A5A"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/InputText18"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputText10"
+        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/genre2"
+            android:background="@color/white"
+            android:hint="Movie genre"
+            android:textColorHint="#5A5A5A"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewadd"
+        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintHorizontal_bias="1.0">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Updatedish"
+            android:layout_gravity="center"
+            android:backgroundTint="#ff0000"
+            android:textColor="@color/white"
+            android:text="ADD"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Deletedish"
+            android:layout_gravity="center"
+            android:backgroundTint="#ff0000"
+            android:textColor="@color/white"
+            android:text="CLEAR"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:drawablePadding="10dp"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to add a different category"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputText18" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

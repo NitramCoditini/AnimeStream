@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183564184892",
+    "project_id": "animestream-fa009",
+    "storage_bucket": "animestream-fa009.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183564184892:android:00d0cb73a7f31500374239",
+        "android_client_info": {
+          "package_name": "com.example.animestream"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO08KGT4I6gOjdRSM7bsVA57r_wrRD0rM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

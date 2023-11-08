@@ -1,0 +1,101 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.animestream'
+    compileSdk 34
+    // it specifies that TTF (TrueType Font) and OTF (OpenType Font) files should not be compressed during the build process.
+    aaptOptions {
+        noCompress "ttf", "otf"
+    }
+    // It specifies which files or resources should be excluded from the packaging process. (into Apk)
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    defaultConfig {
+        applicationId "com.example.animestream"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:22.2.0'
+    implementation 'com.google.firebase:firebase-firestore:24.9.1'
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+    implementation 'com.google.firebase:firebase-database:20.3.0'
+    implementation 'androidx.annotation:annotation:1.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    implementation 'androidx.navigation:navigation-fragment:2.7.4'
+    implementation 'androidx.navigation:navigation-ui:2.7.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    // dependency for exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+
+// for core support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.19.1'
+
+// for adding dash support in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.19.1'
+
+// for adding hls support in exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.19.1'
+
+// for smooth streaming of video in our exoplayer.
+
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.19.1'
+
+// for generating default ui of exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+
+}
